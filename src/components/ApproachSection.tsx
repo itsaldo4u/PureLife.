@@ -1,3 +1,5 @@
+import { useNavigate } from "react-router-dom";
+
 const cards = [
   {
     title: "Mindful Nutrition",
@@ -5,6 +7,7 @@ const cards = [
       "Discover wholesome, nutrient-rich foods that fuel your body and support overall health.",
     image:
       "https://images.unsplash.com/photo-1551218808-94e220e084d2?auto=format&fit=crop&w=800&q=80",
+    path: "/tips", // Path for Mindful Nutrition
   },
   {
     title: "Regular Exercise",
@@ -12,6 +15,7 @@ const cards = [
       "Find activities you enjoy that keep you moving and help maintain physical strength and flexibility.",
     image:
       "https://images.unsplash.com/photo-1605296867304-46d5465a13f1?auto=format&fit=crop&w=800&q=80",
+    path: "/exercise", // Path for Regular Exercise
   },
   {
     title: "Mindfulness Practice",
@@ -19,10 +23,13 @@ const cards = [
       "Cultivate awareness and presence through meditation and mindfulness techniques.",
     image:
       "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=800&q=80",
+    path: "/mindfulness", // Path for Mindfulness Practice
   },
 ];
 
 const ApproachSection = () => {
+  const navigate = useNavigate();
+
   return (
     <section className="py-20 px-4 bg-white">
       <div className="max-w-7xl mx-auto text-center mb-12">
@@ -49,12 +56,12 @@ const ApproachSection = () => {
             <div className="p-6">
               <h3 className="text-lg font-semibold mb-2">{card.title}</h3>
               <p className="text-gray-600 text-sm mb-4">{card.description}</p>
-              <a
-                href="#"
-                className="text-green-600 font-medium flex items-center gap-1 hover:underline"
+              <button
+                onClick={() => navigate(card.path)} // Navigate to the specified path
+                className="text-green-600 font-medium flex items-center gap-1 hover:underline bg-transparent border-none cursor-pointer p-0"
               >
                 Learn more →
-              </a>
+              </button>
             </div>
           </div>
         ))}

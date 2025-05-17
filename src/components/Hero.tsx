@@ -1,6 +1,9 @@
+import React from "react";
 import heroImage from "../assets/hnutrition.jpg"; // kontrollo që emri dhe rruga janë të sakta
+import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
+  const navigate = useNavigate();
   return (
     <section className="bg-[#fefef9] py-20 px-4">
       <div className="max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center justify-between gap-8">
@@ -15,10 +18,13 @@ const Hero = () => {
             wellness, nutrition, and mindfulness.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-            <button className="bg-green-600 text-white px-6 py-3 rounded-md font-medium hover:bg-green-700 transition">
+            <button
+              onClick={() => navigate("/survey")}
+              className="bg-green-600 text-white px-6 py-3 rounded-md font-medium hover:bg-green-700 transition"
+            >
               Get Started →
             </button>
-            <button className="border border-green-600 text-green-600 px-6 py-3 rounded-md font-medium hover:bg-green-50 transition">
+            <button className="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded transition">
               Learn More
             </button>
           </div>
