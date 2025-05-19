@@ -1,22 +1,20 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { surveyQuestions } from "../data/surveyData"; // Import the survey data
 
 const NutritionSurvey: React.FC = () => {
   const navigate = useNavigate();
   const [step, setStep] = useState(1);
-
   const [nutritionAnswers, setNutritionAnswers] = useState({
     fruits: "",
     protein: "",
     water: "",
   });
-
   const [lifestyleAnswers, setLifestyleAnswers] = useState({
     processedFoods: "",
     exercise: "",
     sleep: "",
   });
-
   const [wellbeingAnswers, setWellbeingAnswers] = useState({
     stress: "",
     goals: "",
@@ -86,274 +84,89 @@ const NutritionSurvey: React.FC = () => {
       <div className="max-w-2xl mx-auto bg-[#f7fdf7] shadow-md rounded-xl p-6">
         {step < 4 ? (
           <form className="space-y-6">
-            {step === 1 && (
-              <>
-                <div>
+            {step === 1 &&
+              surveyQuestions.nutrition.map((question) => (
+                <div key={question.name}>
                   <p className="font-medium text-gray-700">
-                    How often do you eat fruits and vegetables?
+                    {question.question}
                   </p>
                   <div className="space-y-1 mt-2">
-                    <label className="flex items-center gap-2">
-                      <input
-                        type="radio"
-                        name="fruits"
-                        value="often"
-                        onChange={handleChange}
-                      />
-                      Often (5+ servings daily)
-                    </label>
-                    <label className="flex items-center gap-2">
-                      <input
-                        type="radio"
-                        name="fruits"
-                        value="sometimes"
-                        onChange={handleChange}
-                      />
-                      Sometimes (2–4 servings daily)
-                    </label>
-                    <label className="flex items-center gap-2">
-                      <input
-                        type="radio"
-                        name="fruits"
-                        value="rarely"
-                        onChange={handleChange}
-                      />
-                      Rarely (0–1 servings daily)
-                    </label>
+                    {question.options.map((option) => (
+                      <label
+                        key={option.value}
+                        className="flex items-center gap-2"
+                      >
+                        <input
+                          type="radio"
+                          name={question.name}
+                          value={option.value}
+                          onChange={handleChange}
+                        />
+                        {option.label}
+                      </label>
+                    ))}
                   </div>
                 </div>
+              ))}
 
-                <div>
+            {step === 2 &&
+              surveyQuestions.lifestyle.map((question) => (
+                <div key={question.name}>
                   <p className="font-medium text-gray-700">
-                    How often do you consume adequate protein?
+                    {question.question}
                   </p>
                   <div className="space-y-1 mt-2">
-                    <label className="flex items-center gap-2">
-                      <input
-                        type="radio"
-                        name="protein"
-                        value="often"
-                        onChange={handleChange}
-                      />
-                      Often (With most meals)
-                    </label>
-                    <label className="flex items-center gap-2">
-                      <input
-                        type="radio"
-                        name="protein"
-                        value="sometimes"
-                        onChange={handleChange}
-                      />
-                      Sometimes (With some meals)
-                    </label>
-                    <label className="flex items-center gap-2">
-                      <input
-                        type="radio"
-                        name="protein"
-                        value="rarely"
-                        onChange={handleChange}
-                      />
-                      Rarely (Minimal protein)
-                    </label>
+                    {question.options.map((option) => (
+                      <label
+                        key={option.value}
+                        className="flex items-center gap-2"
+                      >
+                        <input
+                          type="radio"
+                          name={question.name}
+                          value={option.value}
+                          onChange={handleChange}
+                        />
+                        {option.label}
+                      </label>
+                    ))}
                   </div>
                 </div>
+              ))}
 
-                <div>
+            {step === 3 &&
+              surveyQuestions.wellbeing.map((question) => (
+                <div key={question.name}>
                   <p className="font-medium text-gray-700">
-                    How often do you drink water?
+                    {question.question}
                   </p>
-                  <div className="space-y-1 mt-2">
-                    <label className="flex items-center gap-2">
-                      <input
-                        type="radio"
-                        name="water"
-                        value="often"
-                        onChange={handleChange}
-                      />
-                      Often (8+ glasses daily)
-                    </label>
-                    <label className="flex items-center gap-2">
-                      <input
-                        type="radio"
-                        name="water"
-                        value="sometimes"
-                        onChange={handleChange}
-                      />
-                      Sometimes (4–7 glasses daily)
-                    </label>
-                    <label className="flex items-center gap-2">
-                      <input
-                        type="radio"
-                        name="water"
-                        value="rarely"
-                        onChange={handleChange}
-                      />
-                      Rarely (0–3 glasses daily)
-                    </label>
-                  </div>
+                  {question.type === "textarea" ? (
+                    <textarea
+                      name={question.name}
+                      className="w-full mt-2 p-2 border rounded-md"
+                      placeholder={question.placeholder}
+                      onChange={handleChange}
+                    ></textarea>
+                  ) : (
+                    <div className="space-y-1 mt-2">
+                      {question.options.map((option) => (
+                        <label
+                          key={option.value}
+                          className="flex items-center gap-2"
+                        >
+                          <input
+                            type="radio"
+                            name={question.name}
+                            value={option.value}
+                            onChange={handleChange}
+                          />
+                          {option.label}
+                        </label>
+                      ))}
+                    </div>
+                  )}
                 </div>
-              </>
-            )}
-
-            {step === 2 && (
-              <>
-                <div>
-                  <p className="font-medium text-gray-700">
-                    How often do you eat processed foods?
-                  </p>
-                  <div className="space-y-1 mt-2">
-                    <label className="flex items-center gap-2">
-                      <input
-                        type="radio"
-                        name="processedFoods"
-                        value="often"
-                        onChange={handleChange}
-                      />
-                      Often (Multiple times daily)
-                    </label>
-                    <label className="flex items-center gap-2">
-                      <input
-                        type="radio"
-                        name="processedFoods"
-                        value="sometimes"
-                        onChange={handleChange}
-                      />
-                      Sometimes (A few times weekly)
-                    </label>
-                    <label className="flex items-center gap-2">
-                      <input
-                        type="radio"
-                        name="processedFoods"
-                        value="rarely"
-                        onChange={handleChange}
-                      />
-                      Rarely (Minimal processed foods)
-                    </label>
-                  </div>
-                </div>
-
-                <div>
-                  <p className="font-medium text-gray-700">
-                    How often do you exercise?
-                  </p>
-                  <div className="space-y-1 mt-2">
-                    <label className="flex items-center gap-2">
-                      <input
-                        type="radio"
-                        name="exercise"
-                        value="often"
-                        onChange={handleChange}
-                      />
-                      Often (4+ times weekly)
-                    </label>
-                    <label className="flex items-center gap-2">
-                      <input
-                        type="radio"
-                        name="exercise"
-                        value="sometimes"
-                        onChange={handleChange}
-                      />
-                      Sometimes (1–3 times weekly)
-                    </label>
-                    <label className="flex items-center gap-2">
-                      <input
-                        type="radio"
-                        name="exercise"
-                        value="rarely"
-                        onChange={handleChange}
-                      />
-                      Rarely (Less than weekly)
-                    </label>
-                  </div>
-                </div>
-
-                <div>
-                  <p className="font-medium text-gray-700">
-                    How often do you get adequate sleep (7–9 hours)?
-                  </p>
-                  <div className="space-y-1 mt-2">
-                    <label className="flex items-center gap-2">
-                      <input
-                        type="radio"
-                        name="sleep"
-                        value="often"
-                        onChange={handleChange}
-                      />
-                      Often (Most nights)
-                    </label>
-                    <label className="flex items-center gap-2">
-                      <input
-                        type="radio"
-                        name="sleep"
-                        value="sometimes"
-                        onChange={handleChange}
-                      />
-                      Sometimes (A few nights weekly)
-                    </label>
-                    <label className="flex items-center gap-2">
-                      <input
-                        type="radio"
-                        name="sleep"
-                        value="rarely"
-                        onChange={handleChange}
-                      />
-                      Rarely (Seldom get enough sleep)
-                    </label>
-                  </div>
-                </div>
-              </>
-            )}
-
-            {step === 3 && (
-              <>
-                <div>
-                  <p className="font-medium text-gray-700">
-                    How often do you feel stressed?
-                  </p>
-                  <div className="space-y-1 mt-2">
-                    <label className="flex items-center gap-2">
-                      <input
-                        type="radio"
-                        name="stress"
-                        value="often"
-                        onChange={handleChange}
-                      />
-                      Often (Daily stress)
-                    </label>
-                    <label className="flex items-center gap-2">
-                      <input
-                        type="radio"
-                        name="stress"
-                        value="sometimes"
-                        onChange={handleChange}
-                      />
-                      Sometimes (Occasional stress)
-                    </label>
-                    <label className="flex items-center gap-2">
-                      <input
-                        type="radio"
-                        name="stress"
-                        value="rarely"
-                        onChange={handleChange}
-                      />
-                      Rarely (Minimal stress)
-                    </label>
-                  </div>
-                </div>
-
-                <div>
-                  <p className="font-medium text-gray-700">
-                    What are your main health goals?
-                  </p>
-                  <textarea
-                    name="goals"
-                    className="w-full mt-2 p-2 border rounded-md"
-                    placeholder="I want to improve my energy levels, sleep better, etc."
-                    onChange={handleChange}
-                  ></textarea>
-                </div>
-              </>
-            )}
+              ))}
 
             <div className="flex justify-between">
               {step > 1 && (
