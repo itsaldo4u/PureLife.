@@ -175,7 +175,7 @@ const Mindfulness = (): JSX.Element => {
 
         <div className="relative rounded-xl shadow-md overflow-hidden">
           <img
-            src="/api/placeholder/600/400"
+            src="mindfulness.jpg"
             alt="Mindfulness"
             className="w-full h-64 object-cover"
           />

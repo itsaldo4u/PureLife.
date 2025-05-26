@@ -15,12 +15,11 @@ const Footer = () => {
         {/* Navigation Links */}
         <div className="flex flex-wrap justify-start md:justify-end gap-4 md:gap-6">
           {[
-            { label: "Home", path: "/" },
-            { label: "About", path: "/about" },
-            { label: "Services", path: "/services" },
-            { label: "Blog", path: "/blog" },
+            { label: "Home", path: "/home" },
+            { label: "Nutrition", path: "/nutrition" },
+            { label: "Exercise", path: "/exercise" },
+            { label: "Mindfulness", path: "/mindfulness" },
             { label: "Contact", path: "/contact" },
-            { label: "Mindfulness", path: "/mindfulness" }, // ✅ New link
           ].map(({ label, path }) => (
             <Link
               key={label}

@@ -1,0 +1,28 @@
+{
+  "subscribers": [
+    {
+      "id": 1748106654435,
+      "email": "aldo@mail.com",
+      "subscribedAt": "2025-05-24T17:10:54.435Z"
+    },
+    {
+      "id": 1748106696149,
+      "email": "aldo2@mail.com",
+      "subscribedAt": "2025-05-24T17:11:36.149Z"
+    }
+  ],
+  "testimonials": [
+    {
+      "id": "4301",
+      "name": "aldo",
+      "text": "aldo",
+      "rating": 3
+    },
+    {
+      "id": "7a6a",
+      "name": "ajdhajh",
+      "text": "ahdkjsh",
+      "rating": 3
+    }
+  ]
+}

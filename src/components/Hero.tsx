@@ -1,11 +1,10 @@
-import React from "react";
 import heroImage from "../assets/hnutrition.jpg"; // kontrollo që emri dhe rruga janë të sakta
 import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
   const navigate = useNavigate();
   return (
-    <section className="bg-[#fefef9] py-20 px-4">
+    <section className="bg-[#e6f9e6] py-20 px-4">
       <div className="max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center justify-between gap-8">
         {/* Teksti në të majtë */}
         <div className="md:w-1/2 text-center md:text-left">
@@ -39,28 +38,48 @@ const Hero = () => {
           />
         </div>
       </div>
-
       {/* Seksioni me statistika poshtë */}
-      <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-        <div className="bg-white p-6 rounded-xl shadow-sm">
-          <div className="text-green-500 text-2xl mb-2">😊</div>
-          <h3 className="text-xl font-semibold">10K+</h3>
-          <p className="text-gray-500">Happy Users</p>
+
+      <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div className="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition-all duration-500 hover:scale-105 group overflow-hidden relative">
+          <div className="absolute inset-0 bg-gradient-to-r from-green-50 to-emerald-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <div className="relative z-10">
+            <div className="text-4xl mb-4 transform group-hover:rotate-12 transition-transform duration-300">
+              😊
+            </div>
+            <h3 className="text-2xl font-bold text-gray-800 mb-2">10K+</h3>
+            <p className="text-gray-600">Happy Users</p>
+          </div>
         </div>
-        <div className="bg-white p-6 rounded-xl shadow-sm">
-          <div className="text-green-500 text-2xl mb-2">💚</div>
-          <h3 className="text-xl font-semibold">50+</h3>
-          <p className="text-gray-500">Wellness Experts</p>
+        <div className="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition-all duration-500 hover:scale-105 group overflow-hidden relative">
+          <div className="absolute inset-0 bg-gradient-to-r from-emerald-50 to-teal-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <div className="relative z-10">
+            <div className="text-4xl mb-4 transform group-hover:rotate-12 transition-transform duration-300">
+              💚
+            </div>
+            <h3 className="text-2xl font-bold text-gray-800 mb-2">50+</h3>
+            <p className="text-gray-600">Wellness Experts</p>
+          </div>
         </div>
-        <div className="bg-white p-6 rounded-xl shadow-sm">
-          <div className="text-green-500 text-2xl mb-2">🍃</div>
-          <h3 className="text-xl font-semibold">200+</h3>
-          <p className="text-gray-500">Natural Recipes</p>
+        <div className="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition-all duration-500 hover:scale-105 group overflow-hidden relative">
+          <div className="absolute inset-0 bg-gradient-to-r from-teal-50 to-cyan-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <div className="relative z-10">
+            <div className="text-4xl mb-4 transform group-hover:rotate-12 transition-transform duration-300">
+              🍃
+            </div>
+            <h3 className="text-2xl font-bold text-gray-800 mb-2">200+</h3>
+            <p className="text-gray-600">Natural Recipes</p>
+          </div>
         </div>
-        <div className="bg-white p-6 rounded-xl shadow-sm">
-          <div className="text-green-500 text-2xl mb-2">🌞</div>
-          <h3 className="text-xl font-semibold">365</h3>
-          <p className="text-gray-500">Days of Wellness</p>
+        <div className="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition-all duration-500 hover:scale-105 group overflow-hidden relative">
+          <div className="absolute inset-0 bg-gradient-to-r from-yellow-50 to-orange-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <div className="relative z-10">
+            <div className="text-4xl mb-4 transform group-hover:rotate-12 transition-transform duration-300">
+              🌞
+            </div>
+            <h3 className="text-2xl font-bold text-gray-800 mb-2">365</h3>
+            <p className="text-gray-600">Days of Wellness</p>
+          </div>
         </div>
       </div>
     </section>

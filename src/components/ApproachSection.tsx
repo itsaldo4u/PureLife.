@@ -31,7 +31,7 @@ const ApproachSection = () => {
   const navigate = useNavigate();
 
   return (
-    <section className="py-20 px-4 bg-white">
+    <section className="py-20 px-4 bg-[#e6f9e6]">
       <div className="max-w-7xl mx-auto text-center mb-12">
         <h2 className="text-3xl font-semibold text-green-600">
           Our Approach to Wellness
