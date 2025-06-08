@@ -15,7 +15,7 @@ const Footer = () => {
         {/* Navigation Links */}
         <div className="flex flex-wrap justify-start md:justify-end gap-4 md:gap-6">
           {[
-            { label: "Home", path: "/home" },
+            { label: "Home", path: "/" },
             { label: "Nutrition", path: "/nutrition" },
             { label: "Exercise", path: "/exercise" },
             { label: "Mindfulness", path: "/mindfulness" },

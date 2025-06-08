@@ -1,6 +1,5 @@
 import ApproachSection from "../components/ApproachSection";
 import CallToAction from "../components/CallToAction";
-import Footer from "../components/Footer";
 import Hero from "../components/Hero";
 
 const HomePage: React.FC = () => {
@@ -9,7 +8,6 @@ const HomePage: React.FC = () => {
       <Hero />
       <ApproachSection />
       <CallToAction />
-      <Footer />
     </>
   );
 };

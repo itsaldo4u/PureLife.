@@ -1,14 +1,43 @@
 {
-  "subscribers": [
+  "users": [
     {
-      "id": 1748106654435,
-      "email": "aldo@mail.com",
-      "subscribedAt": "2025-05-24T17:10:54.435Z"
+      "id": "1",
+      "name": "Admin",
+      "email": "admin@example.com",
+      "password": "admin123",
+      "role": "admin",
+      "token": "admin-token-123"
     },
     {
-      "id": 1748106696149,
+      "id": "2",
+      "name": "User",
+      "email": "user@example.com",
+      "password": "user123",
+      "role": "user",
+      "token": "user-token-456"
+    },
+    {
+      "id": "82af",
+      "name": "aldo",
+      "email": "aldo@mail.com",
+      "password": "aldo123",
+      "role": "admin",
+      "token": "aldo-token-789"
+    },
+    {
+      "id": "91c1",
+      "name": "aldo2",
       "email": "aldo2@mail.com",
-      "subscribedAt": "2025-05-24T17:11:36.149Z"
+      "password": "aldo123",
+      "role": "user",
+      "token": "aldo2-token-101"
+    },
+    {
+      "id": "46e5",
+      "name": "xhesi",
+      "email": "xhesi@mail.com",
+      "password": "xhesi123",
+      "role": "admin"
     }
   ],
   "testimonials": [
@@ -23,6 +52,138 @@
       "name": "ajdhajh",
       "text": "ahdkjsh",
       "rating": 3
+    },
+    {
+      "id": "9094",
+      "name": "aldo",
+      "text": "super",
+      "rating": 5
+    }
+  ],
+  "subscribers": [
+    {
+      "id": "1748106654435",
+      "email": "aldo@mail.com",
+      "subscribedAt": "2025-05-24T17:10:54.435Z"
+    },
+    {
+      "id": "1748106696149",
+      "email": "aldo2@mail.com",
+      "subscribedAt": "2025-05-24T17:11:36.149Z"
+    }
+  ],
+  "contacts": [
+    {
+      "id": "ead7",
+      "name": "aldo",
+      "email": "aldo@mail.com",
+      "subject": "wellness",
+      "message": "adfsfaf"
+    },
+    {
+      "id": "b445",
+      "name": "aldo",
+      "email": "aldomecani20@gmail.com",
+      "subject": "wellness",
+      "message": "liorem"
+    }
+  ],
+  "surveyResults": [
+    {
+      "id": "2278",
+      "score": 40,
+      "suggestions": [
+        "Try daily walks or light workouts",
+        "Replace soda with water",
+        "Plan meals to avoid processed foods"
+      ],
+      "date": "2025-05-29T16:34:47.480Z",
+      "nutritionAnswers": {
+        "fruits": "often",
+        "protein": "sometimes",
+        "water": "sometimes"
+      },
+      "lifestyleAnswers": {
+        "processedFoods": "sometimes",
+        "exercise": "sometimes",
+        "sleep": "sometimes"
+      },
+      "wellbeingAnswers": {
+        "stress": "sometimes",
+        "goals": "me i shendetshem"
+      }
+    },
+    {
+      "id": "e24d",
+      "score": 35,
+      "suggestions": [
+        "Try daily walks or light workouts",
+        "Replace soda with water",
+        "Plan meals to avoid processed foods"
+      ],
+      "date": "2025-05-29T20:21:35.002Z",
+      "nutritionAnswers": {
+        "fruits": "sometimes",
+        "protein": "sometimes",
+        "water": "sometimes"
+      },
+      "lifestyleAnswers": {
+        "processedFoods": "sometimes",
+        "exercise": "sometimes",
+        "sleep": "sometimes"
+      },
+      "wellbeingAnswers": {
+        "stress": "sometimes",
+        "goals": ""
+      }
+    },
+    {
+      "id": "9fa8",
+      "score": 40,
+      "suggestions": [
+        "Try daily walks or light workouts",
+        "Replace soda with water",
+        "Plan meals to avoid processed foods"
+      ],
+      "date": "2025-05-30T18:45:27.300Z",
+      "nutritionAnswers": {
+        "fruits": "often",
+        "protein": "sometimes",
+        "water": "sometimes"
+      },
+      "lifestyleAnswers": {
+        "processedFoods": "sometimes",
+        "exercise": "sometimes",
+        "sleep": "sometimes"
+      },
+      "wellbeingAnswers": {
+        "stress": "sometimes",
+        "goals": "cvhcv"
+      }
+    },
+    {
+      "id": "5899",
+      "score": 25,
+      "suggestions": [
+        "Try daily walks or light workouts",
+        "Replace soda with water",
+        "Plan meals to avoid processed foods"
+      ],
+      "date": "2025-05-31T13:26:22.942Z",
+      "nutritionAnswers": {
+        "fruits": "rarely",
+        "protein": "sometimes",
+        "water": "sometimes"
+      },
+      "lifestyleAnswers": {
+        "processedFoods": "sometimes",
+        "exercise": "rarely",
+        "sleep": "sometimes"
+      },
+      "wellbeingAnswers": {
+        "stress": "sometimes",
+        "goals": ""
+      }
     }
   ]
 }

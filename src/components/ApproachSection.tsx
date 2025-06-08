@@ -7,7 +7,7 @@ const cards = [
       "Discover wholesome, nutrient-rich foods that fuel your body and support overall health.",
     image:
       "https://images.unsplash.com/photo-1551218808-94e220e084d2?auto=format&fit=crop&w=800&q=80",
-    path: "/tips", // Path for Mindful Nutrition
+    path: "/nutrition",
   },
   {
     title: "Regular Exercise",
@@ -15,7 +15,7 @@ const cards = [
       "Find activities you enjoy that keep you moving and help maintain physical strength and flexibility.",
     image:
       "https://images.unsplash.com/photo-1605296867304-46d5465a13f1?auto=format&fit=crop&w=800&q=80",
-    path: "/exercise", // Path for Regular Exercise
+    path: "/exercise",
   },
   {
     title: "Mindfulness Practice",
@@ -23,7 +23,7 @@ const cards = [
       "Cultivate awareness and presence through meditation and mindfulness techniques.",
     image:
       "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=800&q=80",
-    path: "/mindfulness", // Path for Mindfulness Practice
+    path: "/mindfulness",
   },
 ];
 

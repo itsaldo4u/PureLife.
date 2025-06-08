@@ -1,4 +1,4 @@
-import heroImage from "../assets/hnutrition.jpg"; // kontrollo që emri dhe rruga janë të sakta
+import heroImage from "../assets/hnutrition.jpg";
 import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
@@ -23,7 +23,10 @@ const Hero = () => {
             >
               Get Started →
             </button>
-            <button className="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded transition">
+            <button
+              onClick={() => navigate("/about")}
+              className="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded transition"
+            >
               Learn More
             </button>
           </div>

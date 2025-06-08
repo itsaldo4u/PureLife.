@@ -79,7 +79,7 @@ const ExerciseLayout: React.FC = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mt-10 mx-auto px-4 py-8">
       {selectedWorkout ? (
         workoutCompleted ? (
           <WorkoutComplete

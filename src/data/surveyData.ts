@@ -1,78 +1,91 @@
-// surveyData.ts
-export const surveyQuestions = {
+// src/data/surveyData.ts
+import { type SurveyQuestion } from "./surveyTypes";
+
+export const surveyQuestions: {
+  nutrition: SurveyQuestion[];
+  lifestyle: SurveyQuestion[];
+  wellbeing: SurveyQuestion[];
+} = {
   nutrition: [
     {
-      question: "How often do you eat fruits and vegetables?",
       name: "fruits",
+      question: "Sa shpesh konsumon fruta?",
+      type: "radio",
       options: [
-        { value: "often", label: "Often (5+ servings daily)" },
-        { value: "sometimes", label: "Sometimes (2–4 servings daily)" },
-        { value: "rarely", label: "Rarely (0–1 servings daily)" },
+        { label: "Shpesh", value: "often" },
+        { label: "Ndonjëherë", value: "sometimes" },
+        { label: "Rrallë", value: "rarely" },
       ],
     },
     {
-      question: "How often do you consume adequate protein?",
       name: "protein",
+      question: "Sa mirë e përfshin proteinën në dietën tënde?",
+      type: "radio",
       options: [
-        { value: "often", label: "Often (With most meals)" },
-        { value: "sometimes", label: "Sometimes (With some meals)" },
-        { value: "rarely", label: "Rarely (Minimal protein)" },
+        { label: "Shpesh", value: "often" },
+        { label: "Ndonjëherë", value: "sometimes" },
+        { label: "Rrallë", value: "rarely" },
       ],
     },
     {
-      question: "How often do you drink water?",
       name: "water",
+      question: "Sa ujë konsumon çdo ditë?",
+      type: "radio",
       options: [
-        { value: "often", label: "Often (8+ glasses daily)" },
-        { value: "sometimes", label: "Sometimes (4–7 glasses daily)" },
-        { value: "rarely", label: "Rarely (0–3 glasses daily)" },
+        { label: "Shumë (2L+)", value: "often" },
+        { label: "Mjaftueshëm", value: "sometimes" },
+        { label: "Pak", value: "rarely" },
       ],
     },
   ],
   lifestyle: [
     {
-      question: "How often do you eat processed foods?",
       name: "processedFoods",
+      question: "Sa shpesh konsumon ushqime të përpunuara?",
+      type: "radio",
       options: [
-        { value: "often", label: "Often (Multiple times daily)" },
-        { value: "sometimes", label: "Sometimes (A few times weekly)" },
-        { value: "rarely", label: "Rarely (Minimal processed foods)" },
+        { label: "Rrallë", value: "often" },
+        { label: "Ndonjëherë", value: "sometimes" },
+        { label: "Shpesh", value: "rarely" },
       ],
     },
     {
-      question: "How often do you exercise?",
       name: "exercise",
+      question: "Sa shpesh ushtron gjatë javës?",
+      type: "radio",
       options: [
-        { value: "often", label: "Often (4+ times weekly)" },
-        { value: "sometimes", label: "Sometimes (1–3 times weekly)" },
-        { value: "rarely", label: "Rarely (Less than weekly)" },
+        { label: "3+ herë", value: "often" },
+        { label: "1-2 herë", value: "sometimes" },
+        { label: "Aspak", value: "rarely" },
       ],
     },
     {
-      question: "How often do you get adequate sleep (7–9 hours)?",
       name: "sleep",
+      question: "Sa orë gjumë bën zakonisht?",
+      type: "radio",
       options: [
-        { value: "often", label: "Often (Most nights)" },
-        { value: "sometimes", label: "Sometimes (A few nights weekly)" },
-        { value: "rarely", label: "Rarely (Seldom get enough sleep)" },
+        { label: "7-8 orë", value: "often" },
+        { label: "5-6 orë", value: "sometimes" },
+        { label: "Më pak se 5 orë", value: "rarely" },
       ],
     },
   ],
   wellbeing: [
     {
-      question: "How often do you feel stressed?",
       name: "stress",
+      question: "Si e vlerëson nivelin tënd të stresit?",
+      type: "radio",
       options: [
-        { value: "often", label: "Often (Daily stress)" },
-        { value: "sometimes", label: "Sometimes (Occasional stress)" },
-        { value: "rarely", label: "Rarely (Minimal stress)" },
+        { label: "I ulët", value: "often" },
+        { label: "Mesatar", value: "sometimes" },
+        { label: "I lartë", value: "rarely" },
       ],
     },
     {
-      question: "What are your main health goals?",
       name: "goals",
+      question: "Cilat janë objektivat e tua për shëndetin dhe mirëqenien?",
       type: "textarea",
-      placeholder: "I want to improve my energy levels, sleep better, etc.",
+      placeholder: "Përshkruaji këtu...",
     },
   ],
 };

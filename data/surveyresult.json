@@ -1,0 +1,26 @@
+[
+    {
+        "id": "2278",
+        "score": 40,
+        "suggestions": [
+            "Try daily walks or light workouts",
+            "Replace soda with water",
+            "Plan meals to avoid processed foods"
+        ],
+        "date": "2025-05-29T16:34:47.480Z",
+        "nutritionAnswers": {
+            "fruits": "often",
+            "protein": "sometimes",
+            "water": "sometimes"
+        },
+        "lifestyleAnswers": {
+            "processedFoods": "sometimes",
+            "exercise": "sometimes",
+            "sleep": "sometimes"
+        },
+        "wellbeingAnswers": {
+            "stress": "sometimes",
+            "goals": "me i shendetshem"
+        }
+    }
+]

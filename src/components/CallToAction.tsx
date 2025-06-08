@@ -19,7 +19,10 @@ const CallToAction = () => {
           >
             Get Started →
           </button>
-          <button className="border border-green-500 text-green-600 font-semibold py-2 px-6 rounded-full hover:bg-green-50 transition">
+          <button
+            onClick={() => navigate("/contact")}
+            className="border border-green-500 text-green-600 font-semibold py-2 px-6 rounded-full hover:bg-green-50 transition"
+          >
             Contact Us
           </button>
         </div>
